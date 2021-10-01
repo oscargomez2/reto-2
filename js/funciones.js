@@ -28,7 +28,7 @@ function guardarCliente(){
 function consultar(){
     $.ajax({
         url : 'https://g61dff592192815-reservabd.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/client/client',
-        //url : 'https://gd7875acd9fe525-sfdb.adb.sa-saopaulo-1.oraclecloudapps.com/ords/admin/client/client',
+        
         // data : {id : 123},
         type : 'GET',
         datatype : 'json',
@@ -82,7 +82,7 @@ function pintarRespuesta(items){
     $("#resultado").append(myTable);
 }
 
-function guardarmensaje(){
+function guardarMensaje(){
     $.ajax({
         url : 'https://g61dff592192815-reservabd.adb.sa-santiago-1.oraclecloudapps.com/ords/admin/message/message',
         data : {
@@ -94,7 +94,8 @@ function guardarmensaje(){
         datatype : 'json',
         success : function(respuesta, textStatus, xhr){
             console.log(respuesta);
-            limpiarCampos();
+            $("#id").val("");
+            $("#message").val("");
         },
         error : function(xhr, status){
             alert('ha sucedido un problema, '+xhr.status);
@@ -122,7 +123,7 @@ function guardarRoom(){
         datatype : 'json',
         success : function(respuesta, textStatus, xhr){
             console.log(respuesta);
-            limpiarCampos();
+            limpiarCamposRoom();
         },
         error : function(xhr, status){
             alert('ha sucedido un problema, '+xhr.status);
@@ -140,4 +141,12 @@ function limpiarCampos(){
     $("#name").val("");
     $("#email").val("");
     $("#age").val("");
+}
+
+function limpiarCamposRoom(){
+    $("#id").val("");
+    $("#room").val("");
+    $("#stars").val("");
+    $("#category_id").val("");
+    $("#description").val("");
 }
