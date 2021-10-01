@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Reserva Hotel</title>
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
+</head>
+
+<body>
+    <h2>
+        <center>Registro Clientes</center>
+    </h2>
+    <div class="wrap">
+        <ul class="tabs">
+            <li> 
+                <a href="#">
+                    <span> detalles </span>
+    
+                </a>
+    
+            </li>
+        </ul>
+    </div>
+    <section>
+        <span style="color: blue"><b>ID</b></span>&nbsp;
+        <input type="number" id="id" placeholder="id">&nbsp;
+        <span style="color: blue"><b>NAME</b></span>&nbsp;
+        <input type="text" id="name" placeholder="name">&nbsp;
+        <span style="color: blue"><b>EMAIL</b></span>&nbsp;
+        <input type="email" id="email" placeholder="email">&nbsp;
+        <span style="color: blue"><b>AGE</b></span>&nbsp;
+        <input type="number" id="age" placeholder="age">&nbsp;
+        <div id="resultado"></div><br>
+        <button onclick="guardarCliente()">Registrar</button>&nbsp;
+        <button onclick="consultar()">Consultar</button>
+    </section>
+    <h2>
+        <center>Registro de mensajes</center>
+    </h2>
+    <section>
+        <span style="color: blue"><b>ID</b></span>&nbsp;
+        <input type="number" id="id" placeholder="id">&nbsp;
+        <span style="color: blue"><b>MESSAGETEXT</b></span>&nbsp;
+        <input type="text" id="message" placeholder="messagetext">&nbsp;
+
+        <div id="resultado1"></div><br>
+        <button onclick="guardarmensaje()">Registrar</button>&nbsp;
+        <button onclick="consultarMen()">Consultar</button>
+
+    </section>
+    <h2>
+        <center>Registro de habitacion</center>
+    </h2>
+    <section>
+        <span style="color: blue"><b>ID</b></span>&nbsp;
+        <input type="number" id="id" placeholder="id">&nbsp;
+        <span style="color: blue"><b>ROOM</b></span>&nbsp;
+        <input type="text" id="room" placeholder="room">&nbsp;
+        <span style="color: blue"><b>STARS</b></span>&nbsp;
+        <input type="number" id="stars" placeholder="stars">&nbsp;
+        <span style="color: blue"><b>CATEGORY_ID</b></span>&nbsp;
+        <input type="number" id="category_id" placeholder="category_id">&nbsp;
+        <span style="color: blue"><b>DESCRIPTION</b></span>&nbsp;
+        <input type="text" id="description" placeholder="description">&nbsp;
+        <div id="resultado"></div><br>
+        <button onclick="guardarRoom()">Registrar</button>&nbsp;
+
+    </section>
+
+</body>
+
+
+</html>
